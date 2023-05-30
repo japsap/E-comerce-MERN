@@ -7,6 +7,7 @@ import { Data } from "../../Constants/Data";
 import Logo from "../../Assets/Images/logo.png";
 
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
+import { HiOutlineBars3BottomRight } from 'react-icons/hi2';
 
 const Navbar = () => {
   return (
@@ -45,7 +46,15 @@ const Navbar = () => {
       {/* end of navbar pc */}
 
       {/* navbar mobile */}
-      <div className="navbar-mobile"></div>
+      <div className="navbar-mobile">
+        <div className="navbar-logo">
+          <img src={Logo} />
+          <h2>Pyrim</h2>
+        </div>
+        <div className="navbar-menu">
+          <HiOutlineBars3BottomRight className="icon"/>
+        </div>
+      </div>
     </div>
   );
 };

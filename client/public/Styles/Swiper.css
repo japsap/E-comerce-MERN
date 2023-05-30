@@ -1,0 +1,54 @@
+.headerSwiper{
+    margin-top: -200px;
+    height: 600px;
+  }
+  
+  .mySwiper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    user-select: none;
+    z-index: 10;
+    opacity: 1;
+  }
+  
+  .swiper {
+    width: 50%;
+    height: auto;
+  }
+  
+  .swiper-slide {
+    overflow: hidden;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: white;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    padding: 8px 16px;
+    border-radius: 100%;
+    color: black !important;
+  }
+  
+  
+  
+  @media  screen and (max-width:1000px) {
+    .swiper{
+      width: 100%;
+    }
+    .headerSwiper{
+      margin-top: 0px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+    display: none;
+    color: transparent !important;
+    background-color: transparent !important;
+  }
+  }
+  
+  
+  

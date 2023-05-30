@@ -101,3 +101,46 @@
     gap: 5px;
     color: rgb(162, 162, 162);
 }
+
+
+
+
+
+
+/* navbar mobile */
+.navbar-container .navbar-mobile{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-container .navbar-mobile .navbar-logo{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.navbar-container .navbar-mobile .navbar-logo img{
+    width: 70px;
+    height: auto;
+    filter: invert(100%);
+}
+
+
+.navbar-container .navbar-mobile .icon{
+    padding: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:900px) {
+    .navbar-container .navbar-pc{
+        display: none;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .navbar-container .navbar-mobile{
+        display: none;
+    }
+}

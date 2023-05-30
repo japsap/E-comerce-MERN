@@ -1,5 +1,7 @@
 @import url("./Navbar.css");
 @import "./Header.css";
+@import './Swiper.css';
+@import './ShowCardsContainer.css';
 
 * {
   padding: 0;
@@ -12,18 +14,3 @@ a {
   text-decoration: none;
 }
 
-
-.mySwiper img {
-  height: auto;
-  width: 700px;
-}
-
-.swiper {
-  width: 50%;
-  height: 100%;
-
-}
-
-.swiper-slide {
-  overflow: hidden;
-}

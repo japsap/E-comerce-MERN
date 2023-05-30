@@ -1,6 +1,6 @@
 .header-mainPage{
     width: 100%;
-    height: 75vh;
+    height: 70vh;
     background-color: #222222;
     position: relative;
 }
@@ -25,15 +25,17 @@
 }
 
 
-.header-mainPage .header-data{
+
+.header-mainPage .header-data .header-text{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    height: 55vh;
+    height: 60vh;
     gap: 10px;
 }
+
 
 .header-mainPage .header-data .pHeader{
     color: white;
@@ -79,12 +81,38 @@
     cursor: pointer;
 }
 
+.header-mainPage .header-data .header-buttons .additonal-shit{
+    background-color: white;
+    padding: 20px;
+    border-radius: .5em;
+    position: absolute;
+    left: 75%;
+    top: 45%;
+
+    transform: rotate(20deg);
+}
+
+.header-mainPage .header-data .header-buttons .additonal-shit .num{
+    font-size: 40px;
+    color: var(--colorGreen);
+}
 
 
 
 @media screen and (max-width:1024px) {
     .header-mainPage .header-data{
-        height: 70vh;
+        height: 80vh;
         text-align: center;
+    }
+    .header-mainPage{
+        height: 80vh;
+    }
+    .header-mainPage .header-data .pHeader{
+        font-size: 50px;
+    }
+    .header-mainPage .header-data .header-buttons .additonal-shit{
+        position: relative;
+        overflow: hidden;
+        display: none;
     }
 }

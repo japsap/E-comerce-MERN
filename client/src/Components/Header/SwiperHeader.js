@@ -1,13 +1,17 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from 'swiper';
 
-import shoe1 from "../../Assets/Images/firstShoe.png";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import { Data } from "../../Constants/Data";
 const SwiperHeader = () => {
+
+  // SwiperCore.use([Autoplay]);
+
   return (
     <div className="headerSwiper">
       <Swiper
@@ -18,20 +22,17 @@ const SwiperHeader = () => {
         navigation
         className="mySwiper"
         zoom={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{ clickable: true }}
       >
-        <SwiperSlide>
-          <img src={shoe1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={shoe1} />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src={shoe1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={shoe1} />
-        </SwiperSlide>
+        {Data.swiperShoes.map(shoe => (
+          <SwiperSlide key={shoe.id}>
+            <img src={shoe.image}/>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
