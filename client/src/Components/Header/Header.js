@@ -3,6 +3,7 @@ import { Data } from "../../Constants/Data";
 
 import line1 from "../../Assets/Images/line1.png";
 import line2 from "../../Assets/Images/line2.png";
+import SwiperHeader from "./SwiperHeader";
 
 const Header = () => {
   return (
@@ -15,8 +16,13 @@ const Header = () => {
           <button>{Data.headerData.btn2}</button>
         </div>
       </div>
-      <img src={line1} className="img1"/>
-      <img src={line2} className="img2"/>
+      
+      <div className="header-lines">
+        <img src={line1} className="img1" />
+        <img src={line2} className="img2" />
+      </div>
+
+      <SwiperHeader />
     </header>
   );
 };

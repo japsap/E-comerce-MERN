@@ -5,19 +5,23 @@
     position: relative;
 }
 
-.header-mainPage img{
+.header-mainPage .header-lines img{
     opacity: 1;
     width: 100%;
     position: absolute;
     
     opacity: 0.7;
     z-index: 0;
+    user-select: none;
 }
+
+
 .header-mainPage .img1{
     top: 30%;
 }
+
 .header-mainPage .img2{
-    top: 40%;
+    top: 35%;
 }
 
 
@@ -74,6 +78,7 @@
 
     cursor: pointer;
 }
+
 
 
 
