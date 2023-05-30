@@ -1,0 +1,103 @@
+:root{
+    --colorGreen : #c9e66f;
+}
+
+.navbar-container{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-container .navbar-pc{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+
+.navbar-container .navbar-pc .navbar-links{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar-container .navbar-pc .navbar-links li a{
+    color: rgb(162, 162, 162);
+    transition: .4s;
+}
+
+.navbar-container .navbar-pc .navbar-links li a:hover{
+    color: rgb(103, 103, 103);
+}
+
+.navbar-container .navbar-pc .navbar-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    color: white;
+
+    gap: 20px;
+}
+
+.navbar-container .navbar-pc .navbar-logo img{
+    width: 70px;
+    height: auto;
+    filter: invert(100%);
+    margin-left: -120px;
+}
+
+
+
+
+
+.navbar-container .navbar-pc .navbar-cart-account{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+
+}
+
+.navbar-container .navbar-pc .navbar-cart-account .shopping-cart{
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-container .navbar-pc .navbar-cart-account .shopping-cart .shopping-icon-container{
+    position: relative;
+}
+
+.navbar-container .navbar-pc .navbar-cart-account .shopping-cart .shopping-icon-container span{
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+   
+    right: -10%;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container .navbar-pc .navbar-cart-account .shopping-cart .icon{
+    font-size: 25px;
+    background-color: var(--colorGreen);
+    padding: 10px;
+    border-radius: .5em;
+
+}
+
+
+.navbar-container .navbar-pc .navbar-cart-account .user-navbar{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(162, 162, 162);
+}

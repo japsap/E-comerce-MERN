@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 import { Data } from "../../Constants/Data";
 
-import Logo from '../../Assets/Images/logo.png'
+import Logo from "../../Assets/Images/logo.png";
+
+import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 
 const Navbar = () => {
   return (
@@ -23,10 +25,21 @@ const Navbar = () => {
           })}
         </div>
         <div className="navbar-logo">
-            <img src={Logo}/>
-            <h2>Pyrim</h2>
+          <img src={Logo} />
+          <h2>Pyrim</h2>
         </div>
-        <div className="navbar-cart-account"></div>
+        <div className="navbar-cart-account">
+          <div className="shopping-cart">
+            <div className="shopping-icon-container">
+                <AiOutlineShoppingCart className="icon"/>
+                <span>0</span>
+            </div>
+          </div>
+          <div className="user-navbar">
+            <AiOutlineUser className="icon"/>
+            <p>Account</p>
+          </div>
+        </div>
       </div>
 
       {/* end of navbar pc */}
