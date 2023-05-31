@@ -3,6 +3,11 @@ import shoe2 from "../Assets/Images/shoes/shoe2.png";
 import shoe3 from "../Assets/Images/shoes/shoe3.png";
 import shoe4 from "../Assets/Images/shoes/shoe4.png";
 
+
+import { AiOutlineUser, AiOutlineMail } from 'react-icons/ai'
+import { BsCalendar3, BsGlobe  } from 'react-icons/bs';
+import { HiLanguage } from 'react-icons/hi2';
+
 export const Data = {
   navbarLinks: [
     {
@@ -59,6 +64,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380697/02/sv01/fnd/IND/fmt/png/,Wild-Rider-Layers-Unisex-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 2,
@@ -68,6 +74,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380697/03/sv01/fnd/IND/fmt/png/Wild-Rider-Layers-Unisex-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 3,
@@ -77,6 +84,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380697/01/sv01/fnd/IND/fmt/png/Wild-Rider-Layers-Unisex-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 4,
@@ -86,6 +94,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/374902/01/sv01/fnd/IND/fmt/png/PUMA-Serve-Pro-Lite-Unisex-Shoes",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 5,
@@ -95,6 +104,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/374902/11/sv01/fnd/IND/fmt/png/PUMA-Serve-Pro-Lite-Unisex-Shoes",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 6,
@@ -104,6 +114,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/375314/01/sv01/fnd/IND/fmt/png/one8-Virat-Kohli-Basket-Classic-Unisex-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 7,
@@ -113,6 +124,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/369863/18/sv01/fnd/IND/fmt/png/Caracal-SoftFoam+-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 8,
@@ -122,6 +134,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/375168/01/sv01/fnd/IND/fmt/png/Mirage-Mox-Brightly-Packed-Shoes",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 9,
@@ -131,6 +144,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/371149/69/sv01/fnd/IND/fmt/png/Future-Rider-Play-On-Unisex-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      favorite: false,
     },
     {
       id: 10,
@@ -140,6 +154,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/371149/68/sv01/fnd/IND/fmt/png/Future-Rider-Play-On-Unisex-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 11,
@@ -149,6 +164,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/371149/72/sv01/fnd/IND/fmt/png/Future-Rider-Play-On-Unisex-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 12,
@@ -158,6 +174,7 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/370914/01/sv01/fnd/IND/fmt/png/Rebound-Lay-Up-Lo-SoftFoam+-Mesh-Shoes",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
     {
       id: 13,
@@ -167,6 +184,62 @@ export const Data = {
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1500,h_1500/global/375314/02/sv01/fnd/IND/fmt/png/one8-Virat-Kohli-Basket-Classic-Unisex-Sneakers",
       description:
         "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+      fav: false,
     },
   ],
+  errorPage: {
+    h1: '404 - PAGE NOT FOUND',
+    p:'The page your are looking for might have been removed, had its name changed or is temporarily unavailable',
+    button: 'Go back'
+  },
+  boxAccountLinks: [
+    {
+      id: 1,
+      name: 'Personal information',
+    },
+    {
+      id: 2,
+      name: 'Billing & Payments',
+    },
+    {
+      id: 3,
+      name: 'Order History',
+    },
+    {
+      id: 4,
+      name: 'Gift Cards',
+    },
+  ],
+  accountBoxData: [
+    {
+      id: 1,
+      name : 'Name',
+      desc : "Alexander Ivanov",
+      icon: <AiOutlineUser/>
+    },
+    {
+      id: 2,
+      name : 'Date of Birth',
+      desc : "15 July 2005",
+      icon: <BsCalendar3/>
+    },
+    {
+      id: 3,
+      name : 'Country Region',
+      desc : "Sofia, Bulgaria",
+      icon: <BsGlobe/>
+    },
+    {
+      id: 4,
+      name : 'Language',
+      desc : "English ( UK ) - English",
+      icon: <HiLanguage/>
+    },
+    {
+      id: 5,
+      name : 'Contactable at',
+      desc : "alexmmech@gmail.com",
+      icon: <AiOutlineMail/>
+    },
+  ]
 };

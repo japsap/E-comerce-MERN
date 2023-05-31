@@ -1,0 +1,60 @@
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+
+import { Data } from "../Constants/Data";
+
+import useServer from "../Hooks/useServer";
+import useFetch from '../Hooks/useFetch'
+
+const UserDash = ({ user }) => {
+  const { useLogout } = useServer();
+
+  const { userId } = useParams()
+
+  const [ data ] = useFetch(`http://localhost:5000/user/${userId}`, {})
+
+  return (
+    <div className="user-dashboard-container">
+      <div className="quick-actions">
+        <h2>{data.user?.username}'s Account</h2>
+        <button className="global-button" onClick={useLogout}>
+          Sign out
+        </button>
+      </div>
+      <div className="account-data-conatiner">
+        <div className="small-account-box">
+          <img src={data.user?.userPfp} />
+          <h2>{data.user?.username}</h2>
+          <p>{data.user?.email}</p>
+          <div className="box-links">
+            {Data.boxAccountLinks.map((link) => (
+              <li key={link.id}>
+                <Link>{link.name}</Link>
+              </li>
+            ))}
+          </div>
+        </div>
+        <div className="personal-information">
+          <h1>Personal Information</h1>
+          <p>
+            Manage your personal information, including phone, numbers and email
+            address where you can be contacted
+          </p>
+          <div className="account-box-datas">
+            {Data.accountBoxData.map((card) => (
+              <div className="box-card" key={card.id}>
+                <div className="text">
+                  <h3>{card.name}</h3>
+                  <p>{card.desc}</p>
+                </div>
+                <i className="icon">{card.icon}</i>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UserDash;

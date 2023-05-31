@@ -1,13 +1,13 @@
 import React from "react";
 
 import { BsBag } from "react-icons/bs";
+
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-const Card = ({ name, price, image, getFav, card, removeFromFav, toggleHeart, id }) => {
-
+const Card = ({ name, price, image, getFav, card, removeFromFav, id, fav }) => {
   return (
     <div className="card-inner">
-      {toggleHeart ? (
+      {!fav ? (
         <AiOutlineHeart
           className="icon-heart"
           onClick={() => getFav(card)}

@@ -1,20 +1,35 @@
-import React from 'react'
+import React from "react";
 
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
-import MainPage from './Routes/MainPage';
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import useAuth from "./Hooks/useAuth";
+import ErrorPage from "./Routes/ErrorPage";
+
+import MainPage from "./Routes/MainPage";
+import MakeAccount from "./Routes/MakeAccount";
+import UserDash from "./Routes/UserDash";
 
 const App = () => {
-  return (
-    <div className='app-container'>
+  const [user] = useAuth();
 
-      <Navbar/>
-      
+  return (
+    <div className="app-container">
+      <Navbar user={user}/>
+
       <Routes>
-        <Route path='/' element={<MainPage/>}/>
+        <Route path="/" element={<MainPage user={user} />} />
+        {user ? (
+          <Route
+            path="/dashboard/:userId"
+            element={<UserDash user={user} />}
+          />
+        ) : (
+          <Route path="/account" element={<MakeAccount />} />
+        )}
+        <Route path="*" element={<ErrorPage/>}/>
       </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

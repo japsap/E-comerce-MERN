@@ -6,12 +6,11 @@ import { HiSortAscending } from 'react-icons/hi';
 import { Data } from '../../Constants/Data';
 
 const ShowCardsContainer = () => {
-  const [toggleHeart, setToggleHeart] = useState(true);
+  // const [toggleHeart, setToggleHeart] = useState(true);
   const [ favorites, setFavorites ] = useState([])
 
   const getFav = (item) => {
     setFavorites([...favorites, item])
-    console.log(favorites);
   }
 
   const removeFromFav = (id) => {
@@ -39,7 +38,6 @@ const ShowCardsContainer = () => {
               getFav={getFav}
               id={card.id}
               removeFromFav={removeFromFav}
-              toggleHeart={toggleHeart}
             />
           );
         })}

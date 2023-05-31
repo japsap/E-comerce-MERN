@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { Data } from "../../Constants/Data";
 const SwiperHeader = () => {
 
-  // SwiperCore.use([Autoplay]);
+  SwiperCore.use([Autoplay]);
 
   return (
     <div className="headerSwiper">

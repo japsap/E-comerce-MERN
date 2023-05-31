@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -9,9 +9,29 @@ import Logo from "../../Assets/Images/logo.png";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import { HiOutlineBars3BottomRight } from 'react-icons/hi2';
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
+
+
+  const navbarRef = useRef()
+
+  window.onscroll = function () {
+    OnScrol();
+  };
+
+  function OnScrol() {
+    if (
+      document.body.scrollTop > 10 ||
+      document.documentElement.scrollTop > 10
+    ) {
+      navbarRef.current.style.backgroundColor = "#222222";
+    } else {
+      navbarRef.current.style.background = "#22222";
+    }
+  }
+
+
   return (
-    <div className="navbar-container">
+    <div className="navbar-container" ref={navbarRef}>
       {/* navbar pc */}
       <div className="navbar-pc">
         <div className="navbar-links">
@@ -36,10 +56,10 @@ const Navbar = () => {
                 <span>0</span>
             </div>
           </div>
-          <div className="user-navbar">
+          {user ? <Link to={`/dashboard/${user._id}`} className="user-navbar">
             <AiOutlineUser className="icon"/>
             <p>Account</p>
-          </div>
+          </Link> : <button className="button-navbar"><Link to='/account'>Sign up</Link></button>}
         </div>
       </div>
 
