@@ -1,20 +1,19 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
-import { Data } from "../Constants/Data";
+import { Data } from "../../Constants/Data";
 
-import useServer from "../Hooks/useServer";
-import useFetch from '../Hooks/useFetch'
-import UserData from "../Components/UserDash/UserData";
-import PostAnAdd from "../Components/UserDash/PostAnAdd";
-import DashboardLinks from "../Components/UserDash/DashboardLinks";
+import useFetch from "../../Hooks/useFetch";
+import useServer from "../../Hooks/useServer";
+import DashboardLinks from "./DashboardLinks";
 
-const UserDash = () => {
+const PostAnAdd = () => {
   const { useLogout } = useServer();
 
-  const { userId } = useParams()
+  const { userId } = useParams();
 
-  const [ data ] = useFetch(`http://localhost:5000/user/${userId}`, {})
+  const [data] = useFetch(`http://localhost:5000/user/${userId}`, {});
 
   return (
     <div className="user-dashboard-container">
@@ -30,15 +29,20 @@ const UserDash = () => {
           <h2>{data.user?.username}</h2>
           <p>{data.user?.email}</p>
           <div className="box-links">
+
             <DashboardLinks user={data?.user}/>
           </div>
         </div>
         <div className="personal-information">
-          <UserData/>
+          <h1>Post an Add your online store</h1>
+          <p>
+            Manage your personal information, including phone, numbers and email
+            address where you can be contacted
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default UserDash;
+export default PostAnAdd;
