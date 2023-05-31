@@ -121,6 +121,7 @@
 .navbar-container .navbar-pc .navbar-cart-account .shopping-cart .icon{
     font-size: 25px;
     background-color: var(--colorGreen);
+    color: black;
     padding: 10px;
     border-radius: .5em;
 

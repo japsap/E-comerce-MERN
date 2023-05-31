@@ -188,6 +188,12 @@
   font-size: 20px;
 }
 
+.CatalogCard-container .catalogcard-data  .error-message{
+  background-color: rgba(255, 0, 0, 0.445);
+  color: red;
+  padding: 20px;
+}
+
 .CatalogCard-container .catalogcard-data .card-btn-details{
   display: flex;
   justify-content: space-between;

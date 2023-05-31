@@ -5,20 +5,14 @@ import { BsBag } from "react-icons/bs";
 
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-const Card = ({ title, price, image, getFav, card, removeFromFav, _id, fav }) => {
+const Card = ({ title, price, image, _id }) => {
   return (
     <div className="card-inner">
-      {!fav ? (
-        <AiOutlineHeart
-          className="icon-heart"
-          onClick={() => getFav(card)}
-        />
-      ) : (
-        <AiFillHeart
-          className="icon-heart red"
-          onClick={() => removeFromFav(_id)}
-        />
-      )}
+      <AiOutlineHeart
+        className="icon-heart"
+        // onClick={() => getFav(card)}
+      />
+
       <Link to={`/catalog/${_id}`}>
         <img src={image} />
       </Link>
@@ -28,7 +22,7 @@ const Card = ({ title, price, image, getFav, card, removeFromFav, _id, fav }) =>
           <h4 className="price">{price}$</h4>
         </div>
         <div className="brand-and-add-to-cart">
-          <p>Brand : {title.split(' ')[0]}</p>
+          <p>Brand : {title.split(" ")[0]}</p>
           <BsBag className="icon" />
         </div>
       </div>

@@ -6,12 +6,37 @@ import useFetch from "../Hooks/useFetch";
 
 import { AiOutlineHeart, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
-const CatalogCardId = () => {
+const CatalogCardId = ({ cart, favorites, setCart, setFavorites }) => {
   const { cardId } = useParams();
 
   const [collabse, setCollabse] = useState(false);
+  const [added, setAdded] = useState(false);
+  const [error, setError] = useState("");
 
   const [data] = useFetch(`http://localhost:5000/catalog/${cardId}`);
+
+  const getItem = (item) => {
+    setAdded(false);
+    let added = false;
+
+    cart?.forEach((product) => {
+      if (item._id == product._id) {
+        added = true;
+      }
+    });
+
+    if (added) {
+      setError("Item already in cart!");
+      setAdded(true);
+
+      setTimeout(() => {
+        setError("");
+      }, 2000);
+
+      return;
+    }
+    setCart([...cart, item]);
+  };
 
   return (
     <div className="CatalogCard-container">
@@ -22,7 +47,8 @@ const CatalogCardId = () => {
         <div className="card-items-pos">
           <div className="card-text">
             <p>
-              <Link to='/'>Home</Link> / <Link to='/'>Catalog</Link> / {data?.card?.title}
+              <Link to="/">Home</Link> / <Link to="/">Catalog</Link> /{" "}
+              {data?.card?.title}
             </p>
             <h3>{data?.card?.title}</h3>
             <p>
@@ -40,9 +66,14 @@ const CatalogCardId = () => {
           <hr className="line" />
 
           <div className="buttons">
-            <button>Add to Cart</button>
+            <button onClick={() => getItem(data.card)}>Add to Cart</button>
             <AiOutlineHeart className="icon" />
           </div>
+          {error && (
+            <div className="error-message">
+              <p>{error}</p>
+            </div>
+          )}
 
           <div
             className="card-btn-details"

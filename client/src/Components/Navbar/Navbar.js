@@ -65,10 +65,10 @@ const Navbar = ({ user, cart, favorites }) => {
             <span>{favorites.length}</span>
           </div>
           <div className="shopping-cart">
-            <div className="shopping-icon-container">
+            <Link to='/cart' className="shopping-icon-container">
               <AiOutlineShoppingCart className="icon" />
               <span>{cart.length}</span>
-            </div>
+            </Link>
           </div>
           {user ? (
             <Link to={`/dashboard/${user._id}`} className="user-navbar">
