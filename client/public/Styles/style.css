@@ -5,6 +5,7 @@
 @import './MakeAccount.css';
 @import './SmallComponents.css';
 @import './UserDash.css';
+@import './Cart.css';
 
 * {
   padding: 0;

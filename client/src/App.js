@@ -6,28 +6,26 @@ import PostAnAdd from "./Components/UserDash/PostAnAdd";
 import useAuth from "./Hooks/useAuth";
 import Cart from "./Routes/Cart";
 import CatalogCardId from "./Routes/CatalogCardId";
-import ErrorPage from "./Routes/ErrorPage";
+import ErrorPage from "./Routes/Static/ErrorPage";
 
-import MainPage from "./Routes/MainPage";
+import MainPage from "./Routes/Static/MainPage";
 import MakeAccount from "./Routes/MakeAccount";
 import UserDash from "./Routes/UserDash";
+import AfterPaymentPage from "./Routes/Static/AfterPaymentPage";
 
 const cartItemFromLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
-const favoritesFromLocalStorage = JSON.parse(localStorage.getItem("favorites")) || [];
 
 const App = () => {
   const [user] = useAuth();
 
-  const [favorites, setFavorites] = useState(favoritesFromLocalStorage);
+  const [favorites, setFavorites] = useState([]);
   const [cart, setCart] = useState(cartItemFromLocalStorage);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
-  useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites))
-  }, [favorites])
+
 
   return (
     <div className="app-container">
@@ -47,7 +45,8 @@ const App = () => {
           }
         />
 
-        <Route path="cart" element={<Cart cart={cart} setCart={setCart} />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} user={user}/>} />
+        <Route path="/complition" element={<AfterPaymentPage user={user}/>}/>
 
         {user ? (
           <Route path="/dashboard/:userId" element={<UserDash user={user} />} />
