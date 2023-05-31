@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 1200px){
     .user-dashboard-container{
-        padding: 100px 20px;
+        padding: 150px 20px;
     }
    
 }
@@ -105,6 +105,9 @@
     .user-dashboard-container .quick-actions{
         flex-direction: column;
         width: 100%;
+    }
+    .user-dashboard-container .account-data-conatiner .small-account-box .box-links{
+        width: 200%;
     }
     .user-dashboard-container .account-data-conatiner .personal-information{
         width: 100%;

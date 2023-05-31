@@ -6,8 +6,11 @@ import CheckOutButton from "../Components/StripeCheckOut/CheckOutButton";
 import { Link } from "react-router-dom";
 
 import { BsArrowLeft } from 'react-icons/bs'
+import useServer from "../Hooks/useServer";
 
 const Cart = ({ cart, user, setCart }) => {
+
+  const  { useLogout } = useServer()
 
   const cartTotalAmount = cart.reduce(
     (acc, data) => acc + data.price * data.quantity,
@@ -47,14 +50,14 @@ const Cart = ({ cart, user, setCart }) => {
   return (
     <div className="cart-container">
       <div className="quick-data">
-        <div>
+        <div className="mb-20">
           <h2>Review your bag.</h2>
           <p>{cart.length} Items in your cart.</p>
         </div>
         {user ? (
-          <button className="global-button">Sign out</button>
+          <button className="global-button" onClick={useLogout}>Sign out</button>
         ) : (
-          <button className="global-button">Login</button>
+          ''
         )}
       </div>
       <div className="cart-items-container">

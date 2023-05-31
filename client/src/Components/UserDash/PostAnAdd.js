@@ -106,7 +106,7 @@ const PostAnAdd = ({ user }) => {
                 />
                 <label>Description</label>
               </div>
-              <div className="buttons">
+              <div className="buttons mb-20">
                 <button>Preview</button>
                 <button type="submit">Add</button>
               </div>
