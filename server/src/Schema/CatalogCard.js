@@ -8,12 +8,10 @@ const CatalogCard = new Schema({
     title: {
         type: String,
         reqired: true,
-        minLength: [3, "Title too small.."]
     },
     description: {
         type: String,
         reqired: true,
-        minLength: [10, "Description too small.."]
     },
     price: {
         type: Number,
@@ -21,7 +19,7 @@ const CatalogCard = new Schema({
     },
     favorite : {
         type: Boolean,
-        required: true
+        required: true,
     },
     quantity : {
         type: Number,

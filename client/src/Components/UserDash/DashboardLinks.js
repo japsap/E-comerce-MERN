@@ -11,7 +11,7 @@ const DashboardLinks = ({ user }) => {
         <Link to={`/dashboard/${user?._id}`}>Personal Information</Link>
       </li>
 
-      {!user?.isAdmin ? (
+      {user?.isAdmin ? (
         <li>
           <Link to={`/dashboard/${user?._id}/post-an-add`}>
             Post An Add

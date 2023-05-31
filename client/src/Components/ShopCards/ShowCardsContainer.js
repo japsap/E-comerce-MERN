@@ -1,12 +1,17 @@
 import React, { useState }from 'react';
 
+import useFetch from '../../Hooks/useFetch';
+
 import Card from './Card';
 
 import { HiSortAscending } from 'react-icons/hi';
+
 import { Data } from '../../Constants/Data';
 
 const ShowCardsContainer = () => {
-  // const [toggleHeart, setToggleHeart] = useState(true);
+
+  const [ data, setData ] = useFetch('http://localhost:5000/catalog')
+
   const [ favorites, setFavorites ] = useState([])
 
   const getFav = (item) => {
@@ -29,7 +34,7 @@ const ShowCardsContainer = () => {
         </div>
       </div>
       <div className="card-container">
-        {Data.shoeCards.map((card) => {
+        {data?.catalog?.map((card) => {
           return (
             <Card
               key={card.id}

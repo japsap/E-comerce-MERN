@@ -1,26 +1,22 @@
-import React, { useState, useEffect } from 'react'
-import useServer from './useServer';
+import React, { useState, useEffect } from "react";
+import useServer from "./useServer";
 
 const useAuth = () => {
+  const [user, setUser] = useState('');
 
-    const [ user, setUser] = useState('');
+  const { getToken } = useServer();
 
-    const { getToken } = useServer();
+  useEffect(() => {
+    getToken().then((res) => {
+      if (res.message === "jwt malformed") {
+        return setUser("");
+      }
 
-    useEffect(() => {
-        getToken()
-            .then(res => {
-                if(res.message === 'jwt malformed'){
-                    return setUser('');
-                }
+      setUser(res);
+    });
+  }, []);
 
-                setUser(res);
-            }) 
-    }, [])
+  return [user];
+};
 
-    return [
-        user        
-    ]
-}
-
-export default useAuth
+export default useAuth;

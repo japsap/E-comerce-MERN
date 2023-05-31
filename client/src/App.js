@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import PostAnAdd from "./Components/UserDash/PostAnAdd";
 import useAuth from "./Hooks/useAuth";
+import CatalogCardId from "./Routes/CatalogCardId";
 import ErrorPage from "./Routes/ErrorPage";
 
 import MainPage from "./Routes/MainPage";
@@ -19,19 +20,23 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<MainPage user={user} />} />
+        <Route path='/catalog/:cardId' element={<CatalogCardId/>}/>
+
         {user ? (
           <Route path="/dashboard/:userId" element={<UserDash user={user} />} />
         ) : (
           <Route path="/account" element={<MakeAccount />} />
         )}
-        {!user.isAdmin ? (
+        
+        {user.isAdmin ? (
           <Route
             path="/dashboard/:userId/post-an-add"
-            element={<PostAnAdd />}
+            element={<PostAnAdd user={user}/>}
           />
         ) : (
           <Route path="" element={<ErrorPage />} />
         )}
+
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

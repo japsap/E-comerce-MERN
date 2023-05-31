@@ -36,3 +36,109 @@
         height: auto;
     }
 }
+
+
+/* *******************POST AN ADD USER DASHBOARD********************* */
+.post-add-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vh;
+    border-radius: .5em;
+}
+
+.post-add-container .dash-item{
+    flex: 50%;
+}
+
+.post-add-container  img{
+    width: 100%;
+    height: auto;
+}
+
+.post-add-container .add-data {
+    width: 100%;
+}
+.post-add-container .add-data .input-container{
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.post-add-container .add-data .input-container input, textarea{
+    border: none;
+    outline: none;
+
+
+    width: 90%;
+
+    padding: 15px;
+
+    font-size: 18px;
+    color: gray;
+
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+.post-add-container .add-data .input-container label {
+    position: absolute;
+    left: 3%;
+    top: 30%;
+    
+    color: gray;
+}
+
+.post-add-container .add-data .input-container input:focus ~ label,
+.post-add-container .add-data .input-container input:valid ~ label{
+    transition: .4s;
+    transform: translateY(-20px);
+    color: var(--colorGreen);
+}
+
+.post-add-container .add-data .input-container textarea:focus ~ label,
+.post-add-container .add-data .input-container textarea:valid ~ label{
+    transition: .4s;
+    transform: translateY(-20px);
+    color: var(--colorGreen);
+}
+
+.post-add-container .add-data .buttons{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-add-container .add-data .buttons button:nth-child(1){
+    width: 50%;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid gray;
+    color: gray;
+    border-radius: .5em ;
+    cursor: pointer;
+}
+.post-add-container .add-data .buttons button:nth-child(2){
+    width: 50%;
+    height: 60px;
+    background-color: var(--colorGreen);
+    color: gray;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1400px){
+    .post-add-container .dash-item{
+        flex: 100%;
+        overflow-y: scroll;
+    }
+    .post-add-container .add-data .buttons{
+        flex-direction: column;
+    }
+    .post-add-container .add-data .buttons button:nth-child(1){
+        width: 100%;
+    }
+    .post-add-container .add-data .buttons button:nth-child(2){
+        width: 100%;
+    }
+}

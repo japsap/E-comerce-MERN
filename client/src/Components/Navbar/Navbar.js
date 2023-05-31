@@ -49,7 +49,7 @@ const Navbar = ({ user }) => {
 
             return (
               <li key={id}>
-                <Link path={path}>{name}</Link>
+                <Link to={path}>{name}</Link>
               </li>
             );
           })}

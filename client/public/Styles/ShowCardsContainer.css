@@ -99,6 +99,144 @@
 .ShowCards-Container .card-container .card-inner img {
   width: 100%;
 }
+/* card id  */
+
+.CatalogCard-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+
+  padding: 120px 200px;
+}
+
+.CatalogCard-container .image-container{
+  width: 50%;
+}
+
+.CatalogCard-container .image-container img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.CatalogCard-container .catalogcard-data{
+  width: 40%;
+  padding: 20px;
+  height: 50vh;
+  position: relative;
+}
+
+
+
+.CatalogCard-container .catalogcard-data .card-text h3{
+  text-decoration: underline;
+  font-size: 30px;
+}
+.CatalogCard-container .catalogcard-data .card-text p{
+  color: gray;
+}
+
+.CatalogCard-container .catalogcard-data .card-text a {
+  color: gray;
+}
+
+.CatalogCard-container .catalogcard-data .price{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin:20px 0;
+}
+
+.CatalogCard-container .catalogcard-data .price span{
+  font-size: 30px;
+}
+
+.CatalogCard-container .catalogcard-data .price strike{
+  font-size: 20px;
+  color: gray;
+}
+
+.CatalogCard-container .catalogcard-data .line{
+  margin-bottom: 50px;
+}
+
+.CatalogCard-container .catalogcard-data .buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.CatalogCard-container .catalogcard-data .buttons button{
+  width: 90%;
+  background-color: transparent;
+  border: 1px solid gray;
+  height: 60px;
+  border-radius: .5em;
+  cursor: pointer;
+}
+
+.CatalogCard-container .catalogcard-data .buttons .icon{
+  background-color: var(--colorGreen);
+  width: 10%;
+  padding: 20px;
+  border-radius: .5em;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.CatalogCard-container .catalogcard-data .card-btn-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+.CatalogCard-container .catalogcard-data .card-btn-details p {
+  color: gray;
+  font-size: 20px;
+}
+
+.CatalogCard-container .catalogcard-data .card-btn-details .icon{
+  font-size: 20px;
+  color: gray;
+}
+
+.CatalogCard-container .catalogcard-data .d-none{
+  opacity: 0;
+  transition: .4s;
+}
+.CatalogCard-container .catalogcard-data .card-details{
+  color: gray;
+  margin-top: 20px;
+  opacity: 1;
+  transition: .4s;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+  .CatalogCard-container{
+    flex-direction: column;
+    padding: 120px 20px;
+
+  }
+  .CatalogCard-container .image-container{
+    width: 100%;
+  }
+  .CatalogCard-container .catalogcard-data{
+    width: 100%;
+  }
+}
 
 @media screen and (min-width: 40em) {
   .ShowCards-Container .card-container {

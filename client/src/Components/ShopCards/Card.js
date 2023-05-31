@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { BsBag } from "react-icons/bs";
 
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-const Card = ({ name, price, image, getFav, card, removeFromFav, id, fav }) => {
+const Card = ({ title, price, image, getFav, card, removeFromFav, _id, fav }) => {
   return (
     <div className="card-inner">
       {!fav ? (
@@ -15,17 +16,19 @@ const Card = ({ name, price, image, getFav, card, removeFromFav, id, fav }) => {
       ) : (
         <AiFillHeart
           className="icon-heart red"
-          onClick={() => removeFromFav(id)}
+          onClick={() => removeFromFav(_id)}
         />
       )}
-      <img src={image} />
+      <Link to={`/catalog/${_id}`}>
+        <img src={image} />
+      </Link>
       <div className="card-things">
         <div className="heading-and-price">
-          <p className="title">{name}</p>
-          <h4 className="price">{price}</h4>
+          <p className="title">{title}</p>
+          <h4 className="price">{price}$</h4>
         </div>
         <div className="brand-and-add-to-cart">
-          <p>Brand : {name.split(' ')[0]}</p>
+          <p>Brand : {title.split(' ')[0]}</p>
           <BsBag className="icon" />
         </div>
       </div>

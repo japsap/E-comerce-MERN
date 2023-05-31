@@ -1,5 +1,6 @@
 const login = "http://localhost:5000/login";
 const register = "http://localhost:5000/register";
+const postAdd = "http://localhost:5000/catalog";
 
 const useServer = () => {
   const headers = {
@@ -36,11 +37,20 @@ const useServer = () => {
     window.location.reload();
     window.location.href = '/';
   };
+
+  const usePostAdd = (title, image, price, description, owner) => {
+    return fetch(postAdd, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(title, image, price, description, owner),
+    }).then((res) => res.json());
+  }
   return {
     useRegister,
     useLogin,
     getToken,
     useLogout,
+    usePostAdd
   };
 };
 

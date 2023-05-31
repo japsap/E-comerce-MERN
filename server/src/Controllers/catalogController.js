@@ -1,24 +1,28 @@
 const catalogService = require("../Services/catalogService");
+const CatalogCard = require('../Schema/CatalogCard');
 
-exports.getAll = (req, res) => {};
+exports.getAll = async (req, res) => {
+  const catalog = await CatalogCard.find().lean();
+  res.json({ status: 201, catalog })
+};
 
 exports.postCatalogCard = async (req, res) => {
 
-  const favorite = false;
   const quantity = 1;
-  
-  const { image, title, description, price } = req.body;
+  const favorite = false
+
+  const { image, title, description, price, owner } = req.body;
 
     try {
-      const newCard = await catalogService.createOne({
+     const catalogItem =  await catalogService.createOne(
         image,
         title,
         description,
         price,
-        favorite,
         quantity,
+        favorite,
         owner,
-      });
+      );
 
     } catch (err) {
       const errors = Object.keys(err.errors).map(
@@ -27,3 +31,11 @@ exports.postCatalogCard = async (req, res) => {
       return res.status(404).json({ status: 404, error: errors });
     }
 };
+
+
+exports.getCatalogCard = async (req, res) => {
+  const { cardId } = req.params;
+
+  const card = await catalogService.getOne(cardId);
+  res.status(201).json({status: 201, card })
+}
