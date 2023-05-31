@@ -60,13 +60,42 @@
     display: flex;
     gap: 20px;
     cursor: pointer;
+}
+.navbar-container .navbar-pc .navbar-cart-account .favorites-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
+.navbar-container .navbar-pc .navbar-cart-account .favorites-cart .icon{
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: black;
+    background-color: var(--colorGreen);
+    padding: 10px;
+    border-radius: .5em;
+}
+
+.navbar-container .navbar-pc .navbar-cart-account .favorites-cart span{
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+   
+    right: -10%;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-container .navbar-pc .navbar-cart-account .shopping-cart{
     display: flex;
     align-items: center;
-
 }
 
 .navbar-container .navbar-pc .navbar-cart-account .shopping-cart .shopping-icon-container{

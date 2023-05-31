@@ -10,10 +10,11 @@ import {
   AiOutlineShoppingCart,
   AiOutlineUser,
   AiOutlineClose,
+  AiOutlineHeart,
 } from "react-icons/ai";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 
-const Navbar = ({ user }) => {
+const Navbar = ({ user, cart, favorites }) => {
   const [toggleMobileNavIcon, setToggleMobileNavIcon] = useState(false);
 
   const navbarRef = useRef();
@@ -59,10 +60,14 @@ const Navbar = ({ user }) => {
           <h2>Pyrim</h2>
         </div>
         <div className="navbar-cart-account">
+          <div className="favorites-cart">
+            <AiOutlineHeart className="icon" />
+            <span>{favorites.length}</span>
+          </div>
           <div className="shopping-cart">
             <div className="shopping-icon-container">
               <AiOutlineShoppingCart className="icon" />
-              <span>0</span>
+              <span>{cart.length}</span>
             </div>
           </div>
           {user ? (
