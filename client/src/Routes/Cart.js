@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import useServer from "../Hooks/useServer";
+
+import { Data } from "../Constants/Data";
 
 import CartCard from "../Components/ShopCards/CartCard";
 import CheckOutButton from "../Components/StripeCheckOut/CheckOutButton";
 
-import { Link } from "react-router-dom";
-
 import { BsArrowLeft } from 'react-icons/bs'
-import useServer from "../Hooks/useServer";
+
 
 const Cart = ({ cart, user, setCart }) => {
 
@@ -62,15 +65,14 @@ const Cart = ({ cart, user, setCart }) => {
       </div>
       <div className="cart-items-container">
         {cart.length === 0 ? (
-          // <div className="shopping-cart-error-container">
-          //   <img src={Data.emptyCartError.img} />
-          //   <h1 className="purple">{Data.emptyCartError.h1}</h1>
-          //   <p className="gray">{Data.emptyCartError.p}</p>
-          //   <Link to="/catalog">
-          //     <button>{Data.emptyCartError.button}</button>
-          //   </Link>
-          // </div>
-          ''
+          <div className="shopping-cart-error-container">
+            <img src={Data.emptyCartError.img} />
+            <h1 className="purple">{Data.emptyCartError.h1}</h1>
+            <p className="gray">{Data.emptyCartError.p}</p>
+            <Link to="/">
+              <button>{Data.emptyCartError.button}</button>
+            </Link>
+          </div>
         ) : (
           cart.map((item) => (
             <CartCard
