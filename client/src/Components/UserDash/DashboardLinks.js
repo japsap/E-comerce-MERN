@@ -10,6 +10,9 @@ const DashboardLinks = ({ user }) => {
       <li>
         <Link to={`/dashboard/${user?._id}`}>Personal Information</Link>
       </li>
+      <li>
+        <Link to={`/dashboard/${user?._id}/orders`}>Order History</Link>
+      </li>
 
       {user?.isAdmin ? (
         <li>

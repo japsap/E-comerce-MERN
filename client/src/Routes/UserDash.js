@@ -13,8 +13,6 @@ const UserDash = ({ user }) => {
 
   const [ data ] = useFetch(`http://localhost:5000/user/${user._id}`, {})
 
-  console.log(data);
-
   return (
     <div className="user-dashboard-container">
       <div className="quick-actions">
