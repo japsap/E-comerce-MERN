@@ -44,7 +44,7 @@ const PurchaseStatus = () => {
             return (
               <div key={_id}>
                 <div className="order-status">
-                  <span>Order Made</span>
+                  <span>Approved</span>
                 </div>
                 <div className="order-status-card">
                   <img src={image} />

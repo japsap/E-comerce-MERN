@@ -9,18 +9,20 @@ import { AiOutlineHeart, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 const CatalogCardId = ({ cart, favorites, setCart, setFavorites }) => {
   const { cardId } = useParams();
 
-  const [collabse, setCollabse] = useState(false);
+  const [collabse, setCollabse] = useState(true);
   const [added, setAdded] = useState(false);
   const [error, setError] = useState("");
 
   const [data] = useFetch(`http://localhost:5000/catalog/${cardId}`);
 
+ 
   const getItem = (item) => {
     setAdded(false);
     let added = false;
 
     cart?.forEach((product) => {
       if (item._id == product._id) {
+
         added = true;
       }
     });

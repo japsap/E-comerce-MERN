@@ -319,12 +319,14 @@
   height: 30px;
 
   border-radius: .5em;
-
+  width: max-content;
+  padding: 5px;
   background-color: rgba(0, 128, 0, 0.415);
 }
 
 .order-status span {
   color: green;
+
 }
 
 .order-status-card{
