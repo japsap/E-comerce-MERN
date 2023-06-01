@@ -27,6 +27,7 @@ const App = () => {
 
 
 
+
   return (
     <div className="app-container">
       <Navbar user={user} favorites={favorites} cart={cart} />
@@ -46,7 +47,7 @@ const App = () => {
         />
 
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} user={user}/>} />
-        <Route path="/complition" element={<AfterPaymentPage user={user}/>}/>
+        <Route path="/success" element={<AfterPaymentPage user={user}/>}/>
 
         {user ? (
           <Route path="/dashboard/:userId" element={<UserDash user={user} />} />

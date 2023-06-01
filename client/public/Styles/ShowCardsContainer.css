@@ -44,6 +44,10 @@
   position: relative;
   cursor: pointer;
 
+  padding: 0 30px;
+
+  border-radius: .5em;
+
   transition: .4s;
 }
 
@@ -94,11 +98,16 @@
   border-radius: 0.5em;
   cursor: pointer;
   background-color: var(--colorGreen);
+  margin-bottom: 30px;
 }
 
 .ShowCards-Container .card-container .card-inner img {
   width: 100%;
 }
+
+
+
+
 /* card id  */
 
 .CatalogCard-container{

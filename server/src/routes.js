@@ -13,5 +13,6 @@ router.post('/catalog', catalogController.postCatalogCard);
 router.get('/catalog/:cardId', catalogController.getCatalogCard)
 
 router.post('/create-payment', stripeController.createPaymentSession)
+router.post('/orders/:customerId', stripeController.stripeCheckOutGetAway)
 
 module.exports = router

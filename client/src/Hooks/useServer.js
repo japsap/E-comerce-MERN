@@ -2,6 +2,7 @@ const login = "http://localhost:5000/login";
 const register = "http://localhost:5000/register";
 const postAdd = "http://localhost:5000/catalog";
 
+
 const useServer = () => {
   const headers = {
     Accept: "application/json",
@@ -45,12 +46,24 @@ const useServer = () => {
       body: JSON.stringify(title, image, price, description, owner),
     }).then((res) => res.json());
   }
+
+  const postAccountOrderStatus = (orderStatusData, userId) => {
+    const postAccountOrderStatuss = `http://localhost:5000/orders/${userId}`
+
+    return fetch(postAccountOrderStatuss, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(orderStatusData)
+    }).then((res) => res.json());
+  }
+
   return {
     useRegister,
     useLogin,
     getToken,
     useLogout,
-    usePostAdd
+    usePostAdd,
+    postAccountOrderStatus
   };
 };
 

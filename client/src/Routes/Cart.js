@@ -115,7 +115,7 @@ const Cart = ({ cart, user, setCart }) => {
               </button>
             ) : (
               <Link>
-                <CheckOutButton cart={cart} />
+                <CheckOutButton cart={cart} setCart={setCart}/>
               </Link>
             )}
             <Link

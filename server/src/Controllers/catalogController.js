@@ -6,6 +6,8 @@ exports.getAll = async (req, res) => {
   res.json({ status: 201, catalog })
 };
 
+
+
 exports.postCatalogCard = async (req, res) => {
 
   const quantity = 1;

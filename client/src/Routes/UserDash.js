@@ -6,13 +6,14 @@ import { Data } from "../Constants/Data";
 import useServer from "../Hooks/useServer";
 import useFetch from '../Hooks/useFetch'
 import UserData from "../Components/UserDash/UserData";
-import PostAnAdd from "../Components/UserDash/PostAnAdd";
 import DashboardLinks from "../Components/UserDash/DashboardLinks";
 
 const UserDash = ({ user }) => {
   const { useLogout } = useServer();
 
   const [ data ] = useFetch(`http://localhost:5000/user/${user._id}`, {})
+
+  console.log(data);
 
   return (
     <div className="user-dashboard-container">

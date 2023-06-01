@@ -25,6 +25,9 @@ const UserSchema = new Schema({
     bio : {
         type: String,
     },
+    userCart:{
+        type: Array
+    }
 })
 
 UserSchema.pre("save", async function(next){

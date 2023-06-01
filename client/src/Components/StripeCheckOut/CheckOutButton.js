@@ -3,7 +3,7 @@ import useAuth from "../../Hooks/useAuth";
 
 import axios from "axios";
 
-const CheckOutButton = ({ cart }) => {
+const CheckOutButton = ({ cart, setCart }) => {
   const [user] = useAuth();
 
   const [isProcessing, setIsProcessing] = useState(false);
