@@ -139,8 +139,19 @@ const MakeAccount = () => {
               <MdAlternateEmail className="icon" />
             </div>
             <div className="input-container">
-              <input onChange={onChangeHandler} required name="password" />
+              <input onChange={onChangeHandler} required name="password" type={!togglePass ? "password" : 'text'}/>
               <label>Password</label>
+              {togglePass ? (
+                <AiOutlineEyeInvisible
+                  className="icon"
+                  onClick={() => setTogglePass((prev) => !prev)}
+                />
+              ) : (
+                <AiOutlineEye
+                  className="icon"
+                  onClick={() => setTogglePass((prev) => !prev)}
+                />
+              )}
               <p>Forgot Password?</p>
             </div>
             <div className="input-container">
@@ -148,6 +159,7 @@ const MakeAccount = () => {
                 onChange={onChangeHandler}
                 required
                 name="repeatPassword"
+                type={!togglePass ? "password" : 'text'}
               />
               <label>Repeat Password</label>
             </div>

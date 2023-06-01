@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
-const uri = 'mongodb://127.0.0.1:27017/MERN-TEST-2';
+// 'mongodb://127.0.0.1:27017/MERN-TEST-2'
+const uri = process.env.MONGODB_URL;
 
 async function db() {
     mongoose.connect(uri)

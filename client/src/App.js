@@ -21,7 +21,9 @@ import AfterPaymentPage from "./Routes/Static/AfterPaymentPage";
 const cartItemFromLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
 
 const App = () => {
+
   const [user] = useAuth();
+
 
   const [favorites, setFavorites] = useState([]);
   const [cart, setCart] = useState(cartItemFromLocalStorage);
