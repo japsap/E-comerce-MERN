@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
 
-import { Data } from "../../Constants/Data";
 
 import useFetch from "../../Hooks/useFetch";
 import useServer from "../../Hooks/useServer";

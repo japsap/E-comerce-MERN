@@ -17,8 +17,8 @@ const AfterPaymentPage = ({ user }) => {
     }, [])
 
     setTimeout(() => {
-      window.location.href = `/dashboard/${orderData.userId}`
-    }, 2000)
+      window.location.href = `/dashboard/${orderData.userId}/orders`
+    }, 3000)
    
   return (
     <div className="successful-container">

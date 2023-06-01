@@ -1,10 +1,8 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-
-import { Data } from "../Constants/Data";
 
 import useServer from "../Hooks/useServer";
 import useFetch from '../Hooks/useFetch'
+
 import UserData from "../Components/UserDash/UserData";
 import DashboardLinks from "../Components/UserDash/DashboardLinks";
 

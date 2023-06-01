@@ -14,8 +14,6 @@ const PurchaseStatus = () => {
 
   const { useLogout } = useServer();
 
-  console.log(data);
-
   return (
     <div className="user-dashboard-container">
       <div className="quick-actions">
@@ -39,23 +37,30 @@ const PurchaseStatus = () => {
             Manage your personal information, including phone, numbers and email
             address where you can be contacted
           </p>
-          {data?.user?.userCart?.map((card) => {
-            const { image, description, title, price, _id, quantity } = card;
-            return (
-              <div key={_id}>
-                <div className="order-status">
-                  <span>Approved</span>
+          {data?.user?.userCart.length === 0 ? (
+            <div className="no-products-bought">
+              <h1>No product were bought by you</h1>
+              <p>It seem like you haven't bought anything from us for now :(</p>
+            </div>
+          ) : (
+            data?.user?.userCart?.map((card) => {
+              const { image, description, title, price, _id, quantity } = card;
+              return (
+                <div key={_id}>
+                  <div className="order-status">
+                    <span>Approved</span>
+                  </div>
+                  <div className="order-status-card">
+                    <img src={image} />
+                    <h4>{title.slice(0, 20) + "..."}</h4>
+                    <p className="desc">{description.slice(0, 50) + "..."}</p>
+                    <span className="price">{price.toFixed(2)}$</span>
+                    <p className="mb-20">{quantity}</p>
+                  </div>
                 </div>
-                <div className="order-status-card">
-                  <img src={image} />
-                  <h4>{title.slice(0, 20) + "..."}</h4>
-                  <p className="desc">{description.slice(0, 50) + "..."}</p>
-                  <span className="price">{price.toFixed(2)}$</span>
-                  <p className="mb-20">{quantity}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </div>
       </div>
     </div>
