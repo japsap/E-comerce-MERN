@@ -7,6 +7,8 @@ import DashboardLinks from "./DashboardLinks";
 import useFetch from "../../Hooks/useFetch";
 import useServer from "../../Hooks/useServer";
 
+import { AiOutlinePlus } from "react-icons/ai";
+
 const PurchaseStatus = () => {
   const { userId } = useParams();
 
@@ -24,7 +26,12 @@ const PurchaseStatus = () => {
       </div>
       <div className="account-data-conatiner">
         <div className="small-account-box">
-          <img src={data.user?.userPfp} />
+          <div className="img-container" onClick={() => {window.location.href=`/dashboard/${userId}`}}>
+            <img src={data.user?.userPfp} />
+            <div className="image-plus-icon">
+              <AiOutlinePlus className="icon" />
+            </div>
+          </div>
           <h2>{data.user?.username}</h2>
           <p>{data.user?.email}</p>
           <div className="box-links">
@@ -35,7 +42,7 @@ const PurchaseStatus = () => {
           <h1>See the status of the purchases you've made!</h1>
           <p>
             Manage your personal information, including phone, numbers and email
-            address where you can be contacted
+            address where you can be contacted.
           </p>
           {data?.user?.userCart.length === 0 ? (
             <div className="no-products-bought">

@@ -1,6 +1,7 @@
 const login = "http://localhost:5000/login";
 const register = "http://localhost:5000/register";
 const postAdd = "http://localhost:5000/catalog";
+const postUpdatePfp = 'http://localhost:5000/user/updateUser';
 
 
 const useServer = () => {
@@ -57,13 +58,22 @@ const useServer = () => {
     }).then((res) => res.json());
   }
 
+  const postUpdateProfile = (data, userId) => {
+    return fetch(postUpdatePfp, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(data, userId)
+    }).then((res) => res.json());
+  }
+
   return {
     useRegister,
     useLogin,
     getToken,
     useLogout,
     usePostAdd,
-    postAccountOrderStatus
+    postAccountOrderStatus,
+    postUpdateProfile 
   };
 };
 

@@ -8,7 +8,7 @@ exports.getUserEmail = (email) => User.findOne({ email });
 
 exports.getUser = (userId) => User.findById(userId);
 
-
+exports.updateUser = (userId, data) => User.findByIdAndUpdate(userId, data)
 
 exports.register = (
   username,

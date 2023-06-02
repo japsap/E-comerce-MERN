@@ -1,0 +1,116 @@
+.popUp-pfp-container{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.384);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: .4s;
+}
+
+
+.popUp-pfp-container .popUp-pfp-card{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+    padding: 30px;
+    border-radius: .5em;
+    background-color: white;
+}
+.popUp-pfp-container .popUp-pfp-card .card-inner{
+    position: relative;
+}
+
+.popUp-pfp-container .popUp-pfp-card .icon{
+    float: right;
+    color: red;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data{
+    width: 100%;
+}
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data h2{
+    margin-top: 20px;
+}
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data img{
+    width: 200px;
+    height: 200px;
+    object-fit:fill;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data .input-container{
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data .input-container input{
+    border: none;
+    outline: none;
+    padding: 15px 0;
+
+    width: 100%;
+    height: 30px;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid gray;
+}
+
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data .input-container label{
+    color: gray;
+    position: absolute;
+    top: 30%;
+    left: 0%;
+}
+
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data .input-container input:focus ~ label,
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data .input-container input:valid ~ label{
+    transform: translateY(-30px) translateX(5px);
+    transition: .4s;
+    color: var(--colorGreen);
+    background-color: white;
+}
+
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data .input-container input:focus,
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data .input-container input:valid{
+    border: 1px solid gray;
+    border-radius: .5em;
+}
+
+
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data  button{
+    width: 100%;
+    color: black;
+    height: 60px;
+
+    background-color: var(--colorGreen);
+    border: none;
+    border-radius: .5em;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+.popUp-pfp-container .popUp-pfp-card .cart-inner .card-data  button:hover{
+    box-shadow: var(--boxShadow);
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width:768px) {
+    .popUp-pfp-container .popUp-pfp-card{
+        width: 80%;
+    }
+}

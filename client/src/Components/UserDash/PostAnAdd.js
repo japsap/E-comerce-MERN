@@ -6,6 +6,9 @@ import useFetch from "../../Hooks/useFetch";
 import useServer from "../../Hooks/useServer";
 import DashboardLinks from "./DashboardLinks";
 
+import { AiOutlinePlus } from 'react-icons/ai';
+
+
 const PostAnAdd = ({ user }) => {
   const { useLogout, usePostAdd } = useServer();
 
@@ -51,7 +54,12 @@ const PostAnAdd = ({ user }) => {
       </div>
       <div className="account-data-conatiner">
         <div className="small-account-box">
-          <img src={data.user?.userPfp} />
+        <div className="img-container" onClick={() => {}}>
+            <img src={data.user?.userPfp} />
+            <div className="image-plus-icon">
+              <AiOutlinePlus className="icon"/>
+            </div>
+          </div>
           <h2>{data.user?.username}</h2>
           <p>{data.user?.email}</p>
           <div className="box-links">

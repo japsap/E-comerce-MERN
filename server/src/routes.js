@@ -7,6 +7,7 @@ const stripeController = require('./Controllers/stripeController');
 router.use('/', authController);
 
 router.get('/user/:userId', userController.getUser);
+router.post('/user/updateUser', userController.postUpdateUser);
 
 router.get('/catalog', catalogController.getAll);
 router.post('/catalog', catalogController.postCatalogCard);

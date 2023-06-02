@@ -6,6 +6,7 @@
 @import './SmallComponents.css';
 @import './UserDash.css';
 @import './Cart.css';
+@import './PopUps.css';
 
 * {
   padding: 0;
