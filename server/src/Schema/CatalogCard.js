@@ -28,7 +28,7 @@ const CatalogCard = new Schema({
     owner : {
         type: String,
         required: true
-    }
+    },
 })
 
 const CatalogModel = model("CatalogCard", CatalogCard)

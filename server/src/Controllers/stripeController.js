@@ -89,7 +89,14 @@ exports.createPaymentSession = async (req, res) => {
     cancel_url: `http://localhost:3000/cart`,
   });
 
-  res.json({ url: session.url });
+  
+  // const retrieve = await stripe.checkout.sessions.retrieve(
+  //   session.id
+  // );
+
+
+
+  res.json({ url: session.url});
 };
 
 exports.stripeCheckOutGetAway = async (req, res) => {

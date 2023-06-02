@@ -26,7 +26,7 @@ const UserSchema = new Schema({
         type: String,
     },
     userCart:{
-        type: Array
+        type : Array, 
     }
 })
 
