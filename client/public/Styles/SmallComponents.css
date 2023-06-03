@@ -172,6 +172,23 @@
     margin-bottom: 50px;
   }
 
+
+  .p-20{
+   padding: 20px;
+  }
+  
+  .p-30{
+    padding: 30px;
+  }
+  
+  .p-40{
+    padding: 40px;
+  }
+  
+  .p-50{
+    padding: 50px;
+  }
+
 /* error page */
 
 .errorPage-container {
@@ -310,8 +327,61 @@
         width: 100%;
     }
 }
+/* payment & billing css */
 
 
+.billing-container{
+  border: 1px solid rgb(199, 199, 199);
+  border-bottom-right-radius:.5em;
+  border-bottom-left-radius:.5em;
+}
+.billing-container .billing-card{
+  padding: 10px 20px;
+}
+
+.billing-container .billing-card-inner{
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+.billing-card .price{
+  color: black;
+  font-size: 25px;
+}
+
+.billing-container .billing-card-inner .billing-card-status{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.billing-container .billing-card-inner .invoice .invoice-id{
+  color: var(--colorGreen);
+}
+
+.billing-container .billing-card-inner .billing-card-status span{
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 720px) {
+  .billing-container{
+    margin-top: 20px;
+    border-radius: .5em;
+  }
+  .billing-container .billing-card-inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    height: auto;
+  }
+}
 
 /* order status css */
 .order-status{

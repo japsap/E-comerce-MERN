@@ -63,15 +63,26 @@ export const Data = {
   },
   boxAccountLinks: [
     {
+      id: 1,
+      name: "Personal Information",
+      path: '/',
+    },
+    {
       id: 2,
       name: "Billing & Payments",
-      path: "/",
+      path: "/payments",
+    },
+    {
+      id: 3,
+      name: "Order History",
+      path: "/orders",
     },
     {
       id: 4,
       name: "Gift Cards",
-      path: "/",
+      path: "/gift-cards",
     },
+
   ],
   accountBoxData: [
     {

@@ -7,13 +7,6 @@ import { Data } from "../../Constants/Data";
 const DashboardLinks = ({ user }) => {
   return (
     <>
-      <li>
-        <Link to={`/dashboard/${user?._id}`}>Personal Information</Link>
-      </li>
-      <li>
-        <Link to={`/dashboard/${user?._id}/orders`}>Order History</Link>
-      </li>
-
       {user?.isAdmin ? (
         <li>
           <Link to={`/dashboard/${user?._id}/post-an-add`}>
@@ -26,7 +19,7 @@ const DashboardLinks = ({ user }) => {
 
       {Data.boxAccountLinks.map((link) => (
         <li key={link.id}>
-          <Link>{link.name}</Link>
+          <Link to={`/dashboard/${user?._id}${link.path}`}>{link.name}</Link>
         </li>
       ))}
     </>

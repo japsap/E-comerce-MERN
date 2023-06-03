@@ -96,7 +96,7 @@ exports.createPaymentSession = async (req, res) => {
 
 
 
-  res.json({ url: session.url});
+  res.json({ url: session.url });
 };
 
 exports.stripeCheckOutGetAway = async (req, res) => {
@@ -108,3 +108,5 @@ exports.stripeCheckOutGetAway = async (req, res) => {
   
   user.save();
 };
+
+

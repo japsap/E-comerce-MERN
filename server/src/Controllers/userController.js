@@ -8,6 +8,8 @@ exports.getUser = async (req, res) => {
   } catch (err) {
     res.status(404).json({ status: 404, message: err.message });
   }
+  
+
 };
 
 exports.postUpdateUser = async (req, res) => {

@@ -20,6 +20,10 @@
 }
 
 .user-dashboard-container .account-data-conatiner .small-account-box{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15%;
+    height: 50vh;
     width: 40%;
     margin-bottom: 30px;
 }
@@ -100,6 +104,17 @@
     color: gray;
 }
 
+.user-dashboard-container .account-data-conatiner .personal-information .payment-sort{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 20px;
+    border: 1px solid rgb(199, 199, 199);
+    padding: 20px;
+    border-top-left-radius:.5em ;
+    border-top-right-radius:.5em ;
+}
+
 .user-dashboard-container .account-data-conatiner .personal-information .no-products-bought{
     display: flex;
     flex-direction: column;
@@ -159,11 +174,18 @@
         flex-direction: column;
         width: 100%;
     }
+
+    .user-dashboard-container .account-data-conatiner .small-account-box{
+        position: static;
+    }
     .user-dashboard-container .account-data-conatiner .small-account-box .box-links{
         width: 200%;
     }
     .user-dashboard-container .account-data-conatiner .personal-information{
         width: 100%;
+    }
+    .user-dashboard-container .account-data-conatiner .personal-information .payment-sort{
+        display: none;
     }
     .user-dashboard-container .account-data-conatiner{
         flex-direction: column;

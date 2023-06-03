@@ -11,6 +11,10 @@ const AfterPaymentPage = ({ user }) => {
 
     const orderData = JSON.parse(userId)
     
+    orderData.itemData.map(x => {
+      x['purchasedAt'] = new Date();
+    })  
+    
     
     useEffect(() => {
       postAccountOrderStatus({ orderStatusData: orderData.itemData, userId: orderData.userId })

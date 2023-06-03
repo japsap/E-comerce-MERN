@@ -15,6 +15,7 @@ import MainPage from "./Routes/Static/MainPage";
 import MakeAccount from "./Routes/MakeAccount";
 import UserDash from "./Routes/UserDash";
 import AfterPaymentPage from "./Routes/Static/AfterPaymentPage";
+import BillingsAndPayments from "./Components/UserDash/BillingsAndPayments";
 
 
 
@@ -81,6 +82,23 @@ const App = () => {
         {/* dashboard order status */}
 
 
+
+        {/* dashboard payments & billings */}
+
+        {user ? (
+          <Route
+            path="/dashboard/:userId/payments"
+            element={<BillingsAndPayments user={user} />}
+          />
+        ) : (
+          // <Route
+          //   path="/dashboard/:userId/payments"
+          //   element={<ErrorPage user={user} />}
+          // />
+          ''
+        )}
+
+        {/* dashboard payments & billings */}
 
         {/*post catalog item */}
         {user.isAdmin ? (
