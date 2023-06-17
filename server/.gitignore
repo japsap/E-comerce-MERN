@@ -1,1 +1,6 @@
 .vercel
+
+
+# {
+#     "rewrites" : [{"source" : "/(.*)", "destination" : "/src"}]
+# }
