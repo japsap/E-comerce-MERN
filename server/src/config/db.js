@@ -5,7 +5,7 @@ const uri = process.env.MONGODB_URL;
 const uri_local = process.env.MONGODBLOCAL_URL
 
 async function db() {
-    mongoose.connect(uri_local)
+    mongoose.connect(uri)
     console.log('Database connected')
 }
 
