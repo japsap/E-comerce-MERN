@@ -14,7 +14,7 @@ const PostAnAdd = ({ user }) => {
 
   const { userId } = useParams();
 
-  const [data] = useFetch(`http://localhost:5000/user/${userId}`, {});
+  const [data] = useFetch(`https://e-comerce-mern-cp8a.vercel.app/user/${userId}`, {});
 
   const [value, setValue] = useState({
     image: "",

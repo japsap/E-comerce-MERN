@@ -12,7 +12,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 const PurchaseStatus = () => {
   const { userId } = useParams();
 
-  const [data] = useFetch(`http://localhost:5000/user/${userId}`, {});
+  const [data] = useFetch(`https://e-comerce-mern-cp8a.vercel.app/user/${userId}`, {});
 
   const { useLogout } = useServer();
 

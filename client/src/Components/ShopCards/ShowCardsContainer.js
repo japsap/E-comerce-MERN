@@ -6,11 +6,11 @@ import Card from './Card';
 
 import { HiSortAscending } from 'react-icons/hi';
 
-import { Data } from '../../Constants/Data';
+
 
 const ShowCardsContainer = () => {
 
-  const [ data, setData ] = useFetch('http://localhost:5000/catalog')
+  const [ data, setData ] = useFetch('https://e-comerce-mern-cp8a.vercel.app/catalog')
 
   return (
     <div className="ShowCards-Container">

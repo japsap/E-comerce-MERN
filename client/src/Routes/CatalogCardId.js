@@ -13,7 +13,7 @@ const CatalogCardId = ({ cart, favorites, setCart, setFavorites }) => {
   const [added, setAdded] = useState(false);
   const [error, setError] = useState("");
 
-  const [data] = useFetch(`http://localhost:5000/catalog/${cardId}`);
+  const [data] = useFetch(`https://e-comerce-mern-cp8a.vercel.app/catalog/${cardId}`);
 
  
   const getItem = (item) => {

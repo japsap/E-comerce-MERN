@@ -12,7 +12,7 @@ import ChangePfpPopUp from "../Components/PopUps/ChangePfpPopUp";
 const UserDash = ({ user }) => {
   const { useLogout } = useServer();
 
-  const [ data ] = useFetch(`http://localhost:5000/user/${user._id}`, {})
+  const [ data ] = useFetch(`https://e-comerce-mern-cp8a.vercel.app/user/${user._id}`, {})
 
   const [ toggle, setToggle] = useState(true)
 

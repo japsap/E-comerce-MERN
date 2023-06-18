@@ -1,8 +1,7 @@
-const login = "http://localhost:5000/login";
-const register = "http://localhost:5000/register";
-const postAdd = "http://localhost:5000/catalog";
-const postUpdatePfp = 'http://localhost:5000/user/updateUser';
-
+const login = "https://e-comerce-mern-cp8a.vercel.app/login";
+const register = "https://e-comerce-mern-cp8a.vercel.app/register";
+const postAdd = "https://e-comerce-mern-cp8a.vercel.app/catalog";
+const postUpdatePfp = "https://e-comerce-mern-cp8a.vercel.app/user/updateUser";
 
 const useServer = () => {
   const headers = {
@@ -37,7 +36,7 @@ const useServer = () => {
   const useLogout = () => {
     localStorage.removeItem("auth");
     window.location.reload();
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   const usePostAdd = (title, image, price, description, owner) => {
@@ -46,25 +45,25 @@ const useServer = () => {
       headers: headers,
       body: JSON.stringify(title, image, price, description, owner),
     }).then((res) => res.json());
-  }
+  };
 
   const postAccountOrderStatus = (orderStatusData, userId) => {
-    const postAccountOrderStatuss = `http://localhost:5000/orders/${userId}`
+    const postAccountOrderStatuss = `http://localhost:5000/orders/${userId}`;
 
     return fetch(postAccountOrderStatuss, {
       method: "POST",
       headers: headers,
-      body: JSON.stringify(orderStatusData)
+      body: JSON.stringify(orderStatusData),
     }).then((res) => res.json());
-  }
+  };
 
   const postUpdateProfile = (data, userId) => {
     return fetch(postUpdatePfp, {
       method: "POST",
       headers: headers,
-      body: JSON.stringify(data, userId)
+      body: JSON.stringify(data, userId),
     }).then((res) => res.json());
-  }
+  };
 
   return {
     useRegister,
@@ -73,7 +72,7 @@ const useServer = () => {
     useLogout,
     usePostAdd,
     postAccountOrderStatus,
-    postUpdateProfile 
+    postUpdateProfile,
   };
 };
 
