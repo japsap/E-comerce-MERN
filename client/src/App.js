@@ -16,6 +16,7 @@ import MakeAccount from "./Routes/MakeAccount";
 import UserDash from "./Routes/UserDash";
 import AfterPaymentPage from "./Routes/Static/AfterPaymentPage";
 import BillingsAndPayments from "./Components/UserDash/BillingsAndPayments";
+import Footer from "./Components/Footer/Footer";
 
 
 
@@ -114,7 +115,7 @@ const App = () => {
         )}
          {/*post catalog item */}
       </Routes>
-    </div>
+      </div>
   );
 };
 

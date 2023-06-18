@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
 import ShowCardsContainer from '../../Components/ShopCards/ShowCardsContainer'
 
@@ -8,6 +9,7 @@ const MainPage = () => {
     <div>
         <Header/>
         <ShowCardsContainer/>
+        <Footer/>
     </div>
   )
 }
