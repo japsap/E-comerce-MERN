@@ -65,7 +65,7 @@ const Navbar = ({ user, cart, favorites }) => {
             <span>{favorites.length}</span>
           </div>
           <div className="shopping-cart">
-            <Link to='/cart' className="shopping-icon-container">
+            <Link to="/cart" className="shopping-icon-container">
               <AiOutlineShoppingCart className="icon" />
               <span>{cart.length}</span>
             </Link>
@@ -101,6 +101,12 @@ const Navbar = ({ user, cart, favorites }) => {
                 onClick={toggleMobileNav}
               />
             )}
+            <div className="cart-mobile-container">
+              <Link to="/cart">
+                <AiOutlineShoppingCart className="icon icon2" />
+              </Link>
+              <span>{cart.length}</span>
+            </div>
           </div>
         </div>
         {toggleMobileNavIcon ? (
@@ -118,11 +124,23 @@ const Navbar = ({ user, cart, favorites }) => {
             </div>
             <div className="navbar-buttons">
               <button className="cart-btn">
-                <Link>
+                <Link to="/cart">
                   <AiOutlineShoppingCart className="icon" />
                 </Link>
               </button>
-              <button className="global-button m-10">Account</button>
+              {user ? (
+                <Link
+                  to={`/dashboard/${user._id}`}
+                  className="global-button m-10"
+                >
+                  <AiOutlineUser className="icon" />
+                  <p>Account</p>
+                </Link>
+              ) : (
+                <button className="button-navbar">
+                  <Link to="/account">Sign up</Link>
+                </button>
+              )}
             </div>
           </div>
         ) : (

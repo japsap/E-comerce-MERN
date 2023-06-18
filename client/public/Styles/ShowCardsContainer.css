@@ -1,5 +1,5 @@
 .ShowCards-Container {
-  margin-top: 300px;
+  margin-top: 100px;
   z-index: 1000;
   padding: 0 200px;
 }
@@ -8,7 +8,9 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
+
 
 .ShowCards-Container .sort-products .sort-btn {
   display: flex;
@@ -117,6 +119,7 @@
   flex-direction: row;
 
   padding: 120px 200px;
+  margin-bottom: 200px;
 }
 
 .CatalogCard-container .image-container{
@@ -183,10 +186,12 @@
   width: 90%;
   background-color: transparent;
   border: 1px solid gray;
+  color: black;
   height: 60px;
   border-radius: .5em;
   cursor: pointer;
 }
+
 
 .CatalogCard-container .catalogcard-data .buttons .icon{
   background-color: var(--colorGreen);
@@ -238,7 +243,6 @@
 
 
 
-
 @media screen and (max-width:1200px) {
   .CatalogCard-container{
     flex-direction: column;
@@ -280,11 +284,14 @@
 @media screen and (max-width:768px) {
   .ShowCards-Container .card-container .card-inner {
     flex: 1 0 200px;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    /* box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
       rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
       padding: 5px;
       border-radius: .5em;
+  }
+  .ShowCards-Container .sort-products{
+    flex-direction: column;
   }
 }
 

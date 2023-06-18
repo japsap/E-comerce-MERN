@@ -2,9 +2,8 @@
 .cart-container .quick-data{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-direction: row;
-
+  margin-bottom: 20px;
     border-bottom: 1px solid rgb(208, 208, 208);
 }
 
@@ -33,7 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+    width: 100%;
     text-align: center;
   
     top: 60%;
@@ -231,6 +230,17 @@
     }
     .cart-items-container{
         overflow-y: none;
+    }
+    .cart-items-container .shopping-cart-error-container{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .cart-items-container .shopping-cart-error-container button{
+      width: 250px;
+      margin-bottom: 50px;
+    }
+    .cart-items-container .shopping-cart-error-container img{
+      width: 100%;
     }
   }
   
