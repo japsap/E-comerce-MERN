@@ -232,6 +232,7 @@
 .CatalogCard-container .catalogcard-data .d-none{
   opacity: 0;
   transition: .4s;
+
 }
 .CatalogCard-container .catalogcard-data .card-details{
   color: gray;
