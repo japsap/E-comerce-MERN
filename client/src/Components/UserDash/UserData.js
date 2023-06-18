@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Data } from "../../Constants/Data";
 
 
 const UserData = () => {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+
+
   return (
     <div>
       <h1>Personal Information</h1>

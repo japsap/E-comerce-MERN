@@ -12,7 +12,7 @@ const CheckOutButton = ({ cart, setCart }) => {
     setIsProcessing(true);
 
     axios
-      .post(`http://localhost:5000/create-payment`, {
+      .post(`https://e-comerce-mern-cp8a.vercel.app/create-payment`, {
         userId: user._id,
         itemData: cart,
       })

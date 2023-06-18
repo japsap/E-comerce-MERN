@@ -43,8 +43,12 @@ const MakeAccount = () => {
         .then(res => {
             if(res.status == 404){
                 setError(res.message)
+                setTimeout(() => {
+                  setError('')
+                }, 3000)
             } else if(res.status == 201){
                 setHasAccont(prev => !prev);
+                setError('')
             }
         })
   };
@@ -57,9 +61,16 @@ const MakeAccount = () => {
             console.log(res)
             if(res.status == 404){
                 setError(res.message)
+
+                setTimeout(() => {
+                  setError('')
+                }, 3000)
+
+
             } else if(res.status == 201){
                 localStorage.setItem("auth", res.token);
                 window.location.href = `/dashboard/${user._id}`
+                setError('')
             }
         })
   };

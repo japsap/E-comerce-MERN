@@ -15,6 +15,10 @@
   .swiper {
     width: 50%;
     height: auto;
+    cursor: grab;
+  }
+  .swiper:active{
+    cursor: grabbing;
   }
   
   .swiper-slide {
@@ -23,13 +27,8 @@
   
   .swiper-button-next,
   .swiper-button-prev {
-    background-color: white;
-    background-position: center;
-    background-size: 40px;
-    background-repeat: no-repeat;
-    padding: 8px 16px;
-    border-radius: 100%;
-    color: black !important;
+    display: none;
+    color:  transparent !important;
   }
   
   

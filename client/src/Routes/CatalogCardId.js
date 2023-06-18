@@ -6,7 +6,7 @@ import useFetch from "../Hooks/useFetch";
 
 import { AiOutlineHeart, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
-const CatalogCardId = ({ cart, favorites, setCart, setFavorites }) => {
+const CatalogCardId = ({ cart, setCart, }) => {
   const { cardId } = useParams();
 
   const [collabse, setCollabse] = useState(true);
@@ -39,6 +39,10 @@ const CatalogCardId = ({ cart, favorites, setCart, setFavorites }) => {
     }
     setCart([...cart, item]);
   };
+
+  window.onload = function () {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <div className="CatalogCard-container">

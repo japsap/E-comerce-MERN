@@ -14,8 +14,8 @@ const Header = () => {
           <p className="pHeader">{Data.headerData.h1}</p>
           <p>{Data.headerData.p}</p>
           <div className="header-buttons">
-            <button>{Data.headerData.btn1}</button>
-            <button>{Data.headerData.btn2}</button>
+            <button><a href="#section-catalog">{Data.headerData.btn1}</a></button>
+            <button><a href="#section-catalog">{Data.headerData.btn2}</a></button>
             <span className="additonal-shit">
               <p className="num">50+</p>
               <p>Types with a <br/> unique design</p>

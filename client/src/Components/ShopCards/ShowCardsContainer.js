@@ -13,7 +13,7 @@ const ShowCardsContainer = () => {
   const [ data, setData ] = useFetch('https://e-comerce-mern-cp8a.vercel.app/catalog')
 
   return (
-    <div className="ShowCards-Container">
+    <section className="ShowCards-Container" id='section-catalog'>
       <div className="sort-products">
         <h1>New Arrivals</h1>
         <div className="sort-btn">
@@ -33,7 +33,7 @@ const ShowCardsContainer = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -46,6 +46,8 @@
   position: relative;
   cursor: pointer;
 
+  z-index: 20;
+
   padding: 0 30px;
 
   border-radius: .5em;
@@ -119,7 +121,6 @@
   flex-direction: row;
 
   padding: 120px 200px;
-  margin-bottom: 200px;
 }
 
 .CatalogCard-container .image-container{
@@ -206,6 +207,7 @@
   background-color: rgba(255, 0, 0, 0.445);
   color: red;
   padding: 20px;
+  border-radius: .5em;
 }
 
 .CatalogCard-container .catalogcard-data .card-btn-details{

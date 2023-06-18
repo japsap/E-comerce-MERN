@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useEffect } from "react";
 
 import { useParams } from "react-router";
 
@@ -15,6 +15,10 @@ const PurchaseStatus = () => {
   const [data] = useFetch(`https://e-comerce-mern-cp8a.vercel.app/user/${userId}`, {});
 
   const { useLogout } = useServer();
+
+  useEffect(() => {
+    window.scrollTo({top:0, left: 0, behavior: 'smooth'});
+  }, []);
 
   return (
     <div className="user-dashboard-container">

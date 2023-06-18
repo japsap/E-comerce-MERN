@@ -50,26 +50,19 @@ const Navbar = ({ user, cart, favorites }) => {
 
             return (
               <li key={id}>
-                <Link to={path}>{name}</Link>
+                <a href={path}>{name}</a>
               </li>
             );
           })}
         </div>
-        <div className="navbar-logo">
+        <div
+          className="navbar-logo"
+          onClick={() => (window.location.href = "/")}
+        >
           <img src={Logo} />
           <h2>Pyrim</h2>
         </div>
         <div className="navbar-cart-account">
-          <div className="favorites-cart">
-            <AiOutlineHeart className="icon" />
-            <span>{favorites.length}</span>
-          </div>
-          <div className="shopping-cart">
-            <Link to="/cart" className="shopping-icon-container">
-              <AiOutlineShoppingCart className="icon" />
-              <span>{cart.length}</span>
-            </Link>
-          </div>
           {user ? (
             <Link to={`/dashboard/${user._id}`} className="user-navbar">
               <AiOutlineUser className="icon" />
@@ -80,6 +73,16 @@ const Navbar = ({ user, cart, favorites }) => {
               <Link to="/account">Sign up</Link>
             </button>
           )}
+          <div className="favorites-cart">
+            <AiOutlineHeart className="icon" />
+            <span>{favorites.length}</span>
+          </div>
+          <div className="shopping-cart">
+            <Link to="/cart" className="shopping-icon-container">
+              <AiOutlineShoppingCart className="icon" />
+              <span>{cart.length}</span>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -88,7 +91,7 @@ const Navbar = ({ user, cart, favorites }) => {
       {/* navbar mobile */}
       <div className="navbar-mb-conti" ref={mobileNavbarRef}>
         <div className="navbar-mobile">
-          <div className="navbar-logo">
+          <div className="navbar-logo" onClick={() => (window.location.href = "/")}>
             <img src={Logo} />
             <h2>Pyrim</h2>
           </div>
@@ -110,7 +113,7 @@ const Navbar = ({ user, cart, favorites }) => {
           </div>
         </div>
         {toggleMobileNavIcon ? (
-          <div className="mobile-inner">
+          <div className="mobile-inner" onClick={toggleMobileNav}>
             <div className="navbar-links">
               {Data.navbarLinks.map((link) => {
                 const { name, path, id } = link;
@@ -123,19 +126,22 @@ const Navbar = ({ user, cart, favorites }) => {
               })}
             </div>
             <div className="navbar-buttons">
-              <button className="cart-btn">
-                <Link to="/cart">
+              <Link to="/cart">
+                <button className="cart-btn">
                   <AiOutlineShoppingCart className="icon" />
-                </Link>
-              </button>
+                </button>
+              </Link>
+
               {user ? (
-                <Link
-                  to={`/dashboard/${user._id}`}
-                  className="global-button m-10"
-                >
-                  <AiOutlineUser className="icon" />
-                  <p>Account</p>
-                </Link>
+                <button className="user-btn">
+                  <Link
+                    to={`/dashboard/${user._id}`}
+                    className="global-button m-10"
+                  >
+                    <AiOutlineUser className="icon" />
+                    <p>Account</p>
+                  </Link>
+                </button>
               ) : (
                 <button className="button-navbar">
                   <Link to="/account">Sign up</Link>

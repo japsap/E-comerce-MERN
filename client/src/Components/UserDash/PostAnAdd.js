@@ -23,6 +23,7 @@ const PostAnAdd = ({ user }) => {
     price: 0,
   });
 
+
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
 

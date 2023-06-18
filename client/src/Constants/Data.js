@@ -19,12 +19,12 @@ export const Data = {
     {
       id: 2,
       name: "Store",
-      path: "/",
+      path: "#section-catalog",
     },
     {
       id: 3,
       name: "Men",
-      path: "/",
+      path: "#section-catalog",
     },
     {
       id: 4,
@@ -50,10 +50,6 @@ export const Data = {
     {
       id: 3,
       image: shoe3,
-    },
-    {
-      id: 4,
-      image: shoe4,
     },
   ],
   errorPage: {

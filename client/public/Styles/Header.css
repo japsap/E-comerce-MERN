@@ -79,7 +79,14 @@
 
     border-radius: 5em;
 
+
     cursor: pointer;
+}
+.header-mainPage .header-data .header-buttons button:nth-child(1) a{
+    color: black;
+}
+.header-mainPage .header-data .header-buttons button:nth-child(2) a{
+    color: white;
 }
 
 .header-mainPage .header-data .header-buttons .additonal-shit{
