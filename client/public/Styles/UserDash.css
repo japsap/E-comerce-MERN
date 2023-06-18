@@ -22,6 +22,7 @@
 .user-dashboard-container .account-data-conatiner .small-account-box{
     position: -webkit-sticky;
     position: sticky;
+    height: 55vh;
     top: 15%;
     width: 40%;
     margin-bottom: 30px;
@@ -166,6 +167,9 @@
     .user-dashboard-container{
         padding: 150px 20px;
     }
+    .user-dashboard-container .account-data-conatiner .small-account-box{
+        height: auto;   
+    }
    
 }
 @media screen and (max-width: 768px){
@@ -194,4 +198,5 @@
         flex: 100%;
         width: 100%;
     }
+  
 }
