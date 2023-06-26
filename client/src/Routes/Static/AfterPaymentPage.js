@@ -1,5 +1,4 @@
 import React, { useEffect, useState }  from "react";
-import useFetch from "../../Hooks/useFetch";
 import useServer from "../../Hooks/useServer";
 
 const AfterPaymentPage = ({ user }) => {

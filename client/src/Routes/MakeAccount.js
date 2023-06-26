@@ -121,6 +121,7 @@ const MakeAccount = () => {
                 onChange={onChangeHandler}
                 required
                 name="repeatPassword"
+                type={!togglePass ? "password" : 'text'} 
               />
               <label>Repeat Password</label>
             </div>

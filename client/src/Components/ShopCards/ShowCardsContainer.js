@@ -6,11 +6,13 @@ import Card from './Card';
 
 import { HiSortAscending } from 'react-icons/hi';
 
+import Spinner from '../Spinner/Spinner';
+
 
 
 const ShowCardsContainer = () => {
 
-  const [ data, setData ] = useFetch('https://e-comerce-mern-cp8a.vercel.app/catalog')
+  const [ data, _, isLoading ] = useFetch('https://e-comerce-mern-cp8a.vercel.app/catalog')
 
   return (
     <section className="ShowCards-Container" id='section-catalog'>
@@ -18,9 +20,10 @@ const ShowCardsContainer = () => {
         <h1>New Arrivals</h1>
         <div className="sort-btn">
           <p>All products</p>
-          <HiSortAscending className="icon" />
+          <HiSortAscending className="icon"/>
         </div>
       </div>
+      {isLoading && <Spinner/> }
       <div className="card-container">
         {data?.catalog?.map((card) => {
           return (
